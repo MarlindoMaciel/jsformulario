@@ -1,0 +1,156 @@
+*,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+:root{
+  --bg:#0f1117;
+  --surface:#1a1d27;
+  --surface2:#22263a;
+  --border:#2e3350;
+  --accent:#6c63ff;
+  --accent2:#a78bfa;
+  --text:#e2e8f0;
+  --muted:#8892b0;
+  --err:#f87171;
+  --ok:#34d399;
+  --r:10px;
+}
+
+form {
+    xbackground:var(--surface2);
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--surface2) !important;
+    xbackground:var(--bg);
+    color:var(--text);
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden
+}
+
+.toolbar{
+    background:var(--surface);
+    border-bottom:1px solid var(--border);
+    padding:10px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-shrink:0;
+    box-shadow:0 2px 20px rgba(0,0,0,.4);
+    flex-wrap:wrap;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:600;
+    font-size:15px;
+    color:var(--accent2);
+    white-space:nowrap
+}
+
+.brand-icon{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:14px
+}
+
+.container-flex {
+    position: absolute; 
+    right: 0;
+}
+
+.btn-ghost{
+    background:var(--surface2);
+    border:1px solid var(--border);
+    color:var(--muted);
+    padding:7px 14px;
+    border-radius:20px;
+    font-size:13px;
+    cursor:pointer;
+    transition:all .2s;
+    white-space:nowrap;
+}
+
+.btn-ghost:hover{
+    border-color:var(--accent);
+    color:var(--text)
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group button[type="button"] {
+    width: 40px;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.titulo {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+
+.campo {
+    display: block;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Bordas unidas */
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+  
+  /* Estilizando o cabeçalho */
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+  /* Formato alternado (Zebrado) */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor para linhas pares */
+}
+  
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Cor para linhas ímpares */
+}
+
+  /* Efeito ao passar o mouse */
+tbody tr:hover {
+   background-color: #ddd;
+}
+

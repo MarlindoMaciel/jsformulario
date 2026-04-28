@@ -1,0 +1,28 @@
+services:
+  jsformulario:
+    # Indica que o serviço 'web' deve ser construído usando o Dockerfile
+    # que está no mesmo diretório.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: 
+      jsformulario:1.0
+
+    container_name: 
+      jsformulario
+
+    # Mapeamento de portas: Porta 80 do host -> Porta 80 do container
+    ports:
+      - "8081:8081"
+
+    # Mapeamento de volumes: Permite que você edite arquivos no seu host
+    # e veja as mudanças instantaneamente no container.
+    volumes:
+      # Mapeia o conteúdo local da pasta 'html' para o diretório padrão do Nginx
+      - ./:/var/www/html
+
+    working_dir:
+      /var/www/html
+
+    # Garantir que o container reinicie se parar
+    restart: always
