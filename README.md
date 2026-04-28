@@ -82,6 +82,38 @@ O projeto está organizado da seguinte forma:
 └── README.md           # Este arquivo.
 ```
 
+## 📚 Modelo de dados JSON
+
+Os dados do formulario e do conteudo digitado são organizados da seguinte forma:
+
+```
+{
+    "seq": 6,
+    "campos": [
+        {
+            "id": 1,
+            "titulo": "Nome"
+        },
+        {
+            "id": 2,
+            "titulo": "CPF"
+        }
+    ],
+    "dados": [
+        [
+            {
+                "campo": 1,
+                "valor": "Nome 1"
+            },
+            {
+                "campo": 2,
+                "valor": "CPF 1"
+            }
+        ]
+    ]
+}
+```
+
 ## 💡 Contribuindo
 
 Toda contribuição é bem-vinda! Se encontrar um *bug*, tem uma sugestão de melhoria ou quer adicionar uma
